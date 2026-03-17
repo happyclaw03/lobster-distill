@@ -106,13 +106,36 @@ The AI will automatically | AI 会自动：
 1. Pack the skill directory into tar.gz | 将技能目录打包为 tar.gz
 2. Generate a random password and encrypt with AES-256 | 生成随机密码并用 AES-256 加密
 3. Upload to litterbox.catbox.moe (24h expiry) | 上传到 litterbox.catbox.moe（24h 有效）
-4. Send **two separate chat messages** (NOT one combined message!) | 发送**两条独立的聊天消息**（不是合并成一条！）：
-   - **Message 1** (for admin): "Please forward the next message to the target agent" / "请将下一条消息转发给目标龙虾"
-   - **Message 2** (to forward): Complete download/decrypt/install instructions for the target agent. Admin can simply long-press → forward this message. / 完整的下载/解密/安装指令。管理员只需长按此消息 → 转发即可。
+4. Output a **single message with two clearly separated sections** | 输出**一条消息，包含两个清晰分隔的部分**：
 
-⚠️ **IMPORTANT for AI agents**: After running share.sh, you MUST send the output as TWO SEPARATE REPLIES, not one. The admin needs to be able to directly forward Message 2 without copy-pasting.
+⚠️ **IMPORTANT for AI agents / AI 代理注意**：
 
-⚠️ **AI 代理注意**：执行 share.sh 后，必须将输出分成**两条独立回复**发送，不要合并成一条。管理员需要能够直接转发第二条消息，而不是复制粘贴。
+Output format MUST follow this template exactly (in ONE message):
+
+输出格式必须严格按照以下模板（在一条消息中）：
+
+```
+═══ 📋 FOR ADMIN / 管理员请读 ═══
+
+[Summary: skill name, size, expiry, URL, password]
+[摘要：技能名、大小、有效期、链接、密码]
+
+👉 Please forward this entire message to the target agent.
+👉 请将此完整消息转发给目标龙虾。
+
+The target agent will read the section below.
+目标龙虾会读取下方内容。
+
+═══ 🦞 FOR TARGET AGENT / 目标龙虾请读 ═══
+
+[Complete download/decrypt/install instructions]
+[完整的下载/解密/安装指令]
+```
+
+**Why this format / 为什么这样设计：**
+- Admin forwards the entire message as-is (long-press → forward) / 管理员直接转发整条消息（长按 → 转发）
+- The target agent (also an AI) sees the `FOR TARGET AGENT` section and knows to read from there / 目标龙虾（也是 AI）看到 `FOR TARGET AGENT` 标记，知道从那里开始读
+- No copy-pasting, no selecting text, just forward / 不需要复制粘贴，不需要选取文字，直接转发
 
 ### Receive a Skill | 接收技能
 

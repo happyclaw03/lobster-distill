@@ -61,32 +61,23 @@ echo "[+] Uploaded / 已上传: $URL"
 rm -rf "$TMPDIR"
 
 # ============================================================
-# MESSAGE 1: For the human admin / 第一条消息：给管理员
+# Single message with two clearly separated sections
+# 一条消息，两个清晰分隔的部分
 # ============================================================
 echo ""
-echo "========================================="
-echo "  MESSAGE 1: FOR YOU (ADMIN)"
-echo "  第一条消息：给你（管理员）"
-echo "========================================="
+echo "═══ 📋 FOR ADMIN / 管理员请读 ═══"
 echo ""
 echo "📦 Skill / 技能: $DESC"
 echo "📁 Source / 来源: $BASENAME ($FILETYPE, $SIZE encrypted / 已加密)"
 echo "⏰ Expires in 24 hours / 24小时后过期"
-echo "🔑 Password / 密码: $PASSWORD"
-echo "🔗 URL / 链接: $URL"
 echo ""
-echo "👉 Please forward MESSAGE 2 below to the target OpenClaw agent."
-echo "👉 请将下方的【第二条消息】完整转发给目标龙虾。"
+echo "👉 Please forward this entire message to the target agent."
+echo "👉 请将此完整消息转发给目标龙虾。"
 echo ""
-
-# ============================================================
-# MESSAGE 2: For the target agent (copy-paste this entire block)
-# 第二条消息：给目标龙虾（完整复制粘贴转发此内容）
-# ============================================================
-echo "========================================="
-echo "  MESSAGE 2: FORWARD THIS TO THE TARGET"
-echo "  第二条消息：将以下内容完整转发给对方"
-echo "========================================="
+echo "The target agent will read the section below."
+echo "目标龙虾会读取下方内容。"
+echo ""
+echo "═══ 🦞 FOR TARGET AGENT / 目标龙虾请读 ═══"
 echo ""
 
 if [ "$FILETYPE" = "tar.gz" ]; then
@@ -146,8 +137,3 @@ rm -f /tmp/${BASENAME}.enc
 ⏰ Link expires in 24 hours, download ASAP. / 链接24小时后过期，请尽快下载。
 NOTES
 fi
-
-echo ""
-echo "========================================="
-echo "  END OF MESSAGE 2 / 第二条消息结束"
-echo "========================================="
