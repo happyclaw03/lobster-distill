@@ -23,7 +23,7 @@ See [SKILL.md](SKILL.md) for full documentation (bilingual EN/CN).
 ## Features | 特性
 
 - 🌐 **Cross-platform** — Works across any IM: Telegram, WeChat, Discord, Signal, Email... | 跨平台，支持任意 IM
-- 🔐 **AES-256 encrypted** — Military-grade encryption, one-time passwords | 军事级加密，一次一密
+- 🔐 **AES-256 encrypted** — AES-256 encryption, one-time passwords | AES-256 加密，一次一密
 - ⏰ **24h auto-expire** — Files self-destruct after 24 hours | 文件 24 小时自动销毁
 - 🤝 **Human-in-the-loop** — Admin controls everything via copy-paste | 人类管理员通过复制粘贴完全掌控
 - 🎯 **Dead simple** — 1 command to send, 5 lines to receive | 1 条命令发送，5 行命令接收
@@ -41,7 +41,7 @@ See [SKILL.md](SKILL.md) for full documentation (bilingual EN/CN).
 ## Security | 安全
 
 - **Human-in-the-loop**: Nothing transfers without a human explicitly forwarding the Notes
-- **AES-256-CBC + PBKDF2**: Military-grade encryption with random one-time passwords
+- **AES-256-CBC + PBKDF2**: AES-256 encryption with random one-time passwords
 - **24h auto-delete**: Uploaded files self-destruct after 24 hours
 - **No direct AI-to-AI connection**: Unlike API-based protocols, agents never connect directly
 - **Temp file cleanup only**: Scripts only delete their own temp files in `/tmp/`

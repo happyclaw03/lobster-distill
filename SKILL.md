@@ -37,7 +37,7 @@ Notes 是纯文本。人类可以通过**任何 IM 平台**转发：
 
 ### 🔐 Encrypted & Private | 加密传输，私密安全
 
-- AES-256-CBC + PBKDF2 encryption, military-grade | 军事级加密
+- AES-256-CBC + PBKDF2 encryption, AES-256 | AES-256 加密
 - Random 24-char password, one-time use | 随机 24 位密码，一次一密
 - Files auto-expire in 24 hours | 文件 24 小时自动过期销毁
 - Password embedded in Notes, no separate channel needed | 密码嵌入 Notes，无需单独传输
